@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         Double amountInDollarsDouble = amountInPoundsDouble * 1.3;
         String amountInDollarsString = String.format("%.2f", amountInDollarsDouble);
         Log.i("Info", amountInDollarsString);
+        Toast.makeText(this, "Euros " + amountInPounds + " is $" + amountInDollarsString, Toast.LENGTH_LONG).show();
 
     }
 
