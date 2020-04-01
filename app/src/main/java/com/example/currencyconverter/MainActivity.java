@@ -12,7 +12,11 @@ public class MainActivity extends AppCompatActivity {
 
         Log.i("Info", "Button pressed");
         EditText editText = (EditText) findViewById(R.id.editText);
-        Log.i("Info", editText.getText().toString());
+        String amountInPounds = editText.getText().toString();
+        double amountInPoundsDouble = Double.parseDouble(amountInPounds);
+        Double amountInDollarsDouble = amountInPoundsDouble * 1.3;
+        String amountInDollarsString = Double.toString(amountInDollarsDouble);
+        Log.i("Info", amountInDollarsString);
 
     }
 
